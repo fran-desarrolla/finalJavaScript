@@ -1,0 +1,77 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 0.5fr 1fr 3.5fr 0.5fr;
+  grid-auto-columns: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "menu menu menu"
+    "selector selector selector"
+    "preview preview cuenta"
+    "footer footer footer";
+}
+
+.menu {
+  justify-self: stretch;
+  align-self: stretch;
+  grid-area: menu;
+  background-color: black;
+  display:flex;
+  justify-content: center;
+align-items: center;}
+
+.selector {
+  justify-self: stretch;
+  align-self: stretch;
+  grid-area: selector;
+  background-color: pink;
+  display:flex;
+  justify-content: space-around;
+align-items: center;
+}
+
+.cuenta {
+  justify-self: stretch;
+  align-self: stretch;
+  grid-area: cuenta;
+  background-color: aqua;
+}
+.preview {
+  justify-self: stretch;
+  align-self: stretch;
+  grid-area: preview;
+  display:flex;
+  justify-content: space-around;
+align-items: center;
+}
+
+
+.footer {
+  justify-self: stretch;
+  align-self: stretch;
+  grid-area: footer;
+  background-color: brown;
+  display:flex;
+  justify-content: space-around;
+align-items: center;
+}
+
+button{
+  width:100px;
+  padding:15px;
+  border:none;
+  border-radius: 8px;
+ 
+}
+
+button:hover{
+  background-color:greenyellow;
+}
+
