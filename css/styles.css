@@ -42,6 +42,10 @@ align-items: center;
   align-self: stretch;
   grid-area: cuenta;
   background-color: aqua;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .preview {
   justify-self: stretch;
@@ -101,3 +105,8 @@ img{
 .texto{
   width:100%
 }
+
+table{
+  
+}
+
