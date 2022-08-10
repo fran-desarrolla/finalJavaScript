@@ -1,5 +1,5 @@
 // defino el objeto que voy a utilizar mediante class
-const precioPanComun = 90
+/*const precioPanComun = 90
 const precioPanPapa = 100
 const precioCarne = 150
 const precioPollo = 200
@@ -14,9 +14,36 @@ const precioGaseosaChica = 200
 const precioGaseosaMediana = 240
 const precioGaseosaGrande = 260
 const precioDescuento = 0.90
+*/
+
+const btnInicio = document.getElementById("btnInicio")
+const selInicio = document.getElementById("selInicio")
+const selPan = document.getElementById("selPan")
+const btnAtras = document.getElementById("btnAtras")
+const btnSiguiente = document.getElementById("btnSiguiente")
 
 
-class Combo {
+
+btnInicio.onclick = () =>{
+   ocultaTodo() 
+   selPan.style.display = "block"
+   muestraBotones()
+}
+
+function muestraBotones(){
+    btnAtras.style.display ="block"
+    btnSiguiente.style.display ="block"
+}
+
+function ocultaTodo(){
+    selInicio.style.display = "none"
+    selPan.style.display = "none"
+}
+
+
+
+
+/*class Combo {
     constructor(pan, precioPan, medallon, cantidadMedallon, precioMedallon, queso, jamon, lechuga, tomate, precioQueso, precioJamon, precioLechuga, precioTomate, sizePapas, papas, gaseosa, sizeGaseosa, precioGaseosa, descuento, precioDescuento, totalCombo) {
 
         this.pan = pan;
@@ -267,6 +294,6 @@ combo1.seleccionaTomate()
 combo1.seleccionaPapas()
 combo1.seleccionaGaseosa()
 combo1.calculaTotal()
-combo1.aplicaDescuento()
+combo1.aplicaDescuento()*/
 
 

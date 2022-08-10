@@ -87,6 +87,10 @@ button:hover{
   align-items: center;
 }
 
+.selImg-1 {
+  cursor:pointer
+}
+
 .tituloOpciones{
   padding:5px
 }
@@ -106,7 +110,9 @@ img{
   width:100%
 }
 
-table{
-  
+
+
+.oculto{
+  display: none;
 }
 
