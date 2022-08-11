@@ -33,7 +33,7 @@ var contador = 0
 
 btnInicio.onclick = () =>{
    ocultaTodo() 
-   selPan.style.display = "block"
+   selPan.style.display = "flex"
    muestraBotones()
     aumentaContador()
     console.log(contador)
