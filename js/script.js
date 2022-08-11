@@ -19,25 +19,93 @@ const precioDescuento = 0.90
 const btnInicio = document.getElementById("btnInicio")
 const selInicio = document.getElementById("selInicio")
 const selPan = document.getElementById("selPan")
+const selMedallon = document.getElementById("selMedallon")
+const selJqlt = document.getElementById("selJqlt")
+const selPapas = document.getElementById("selPapas")
+const selGaseosa = document.getElementById("selGaseosa")
+const selFinal = document.getElementById("selFinal")
+
 const btnAtras = document.getElementById("btnAtras")
 const btnSiguiente = document.getElementById("btnSiguiente")
 
+var contador = 0
 
 
 btnInicio.onclick = () =>{
    ocultaTodo() 
    selPan.style.display = "block"
    muestraBotones()
+    aumentaContador()
+    console.log(contador)
+   
 }
 
+btnAtras.onclick = () =>{
+    disminuyeContador()
+    mueveSlide()
+        console.log(contador)
+}
+
+btnSiguiente.onclick = () =>{
+    aumentaContador()
+    mueveSlide()
+    console.log(contador)
+}
+
+function aumentaContador(){
+    contador = contador + 1
+}
+
+function disminuyeContador(){
+    contador = contador - 1
+}
+
+function mueveSlide(){
+if(contador == 0){
+    ocultaTodo()
+    selInicio.style.display="flex"
+    ocultaBotones()}else if (contador == 1){
+        ocultaTodo()
+        selPan.style.display="flex"
+    }else if (contador == 2){
+        ocultaTodo()
+        selMedallon.style.display="flex"
+    }else if (contador == 3){
+        ocultaTodo()
+        selJqlt.style.display="flex"
+    }else if (contador == 4){
+        ocultaTodo()
+        selPapas.style.display="flex"
+    }else if (contador == 5){
+        ocultaTodo()
+        muestraBotones()
+        selGaseosa.style.display="flex"
+    }else{
+        ocultaTodo()
+        selFinal.style.display="flex"
+        btnSiguiente.style.display="none"
+    }
+}
+
+
 function muestraBotones(){
-    btnAtras.style.display ="block"
-    btnSiguiente.style.display ="block"
+    btnAtras.style.display ="flex"
+    btnSiguiente.style.display ="flex"
+}
+
+function ocultaBotones(){
+    btnAtras.style.display ="none"
+    btnSiguiente.style.display ="none"
 }
 
 function ocultaTodo(){
     selInicio.style.display = "none"
     selPan.style.display = "none"
+    selMedallon.style.display = "none"
+    selJqlt.style.display = "none"
+    selPapas.style.display = "none"
+    selGaseosa.style.display = "none"
+    selFinal.style.display = "none"
 }
 
 
